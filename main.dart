@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -390,8 +391,14 @@ class _DashboardState extends State<Dashboard> {
                 BoxShadow(color: gold.withOpacity(.18), blurRadius: 12)
               ],
             ),
-            child: const Icon(Icons.diamond_outlined,
-                color: goldLight, size: 27),
+            child: ClipOval(
+  child: Image.asset(
+    'diamond_logo.jpeg',
+    width: 27,
+    height: 27,
+    fit: BoxFit.cover,
+  ),
+),
           ),
           const SizedBox(width: 11),
           Expanded(
