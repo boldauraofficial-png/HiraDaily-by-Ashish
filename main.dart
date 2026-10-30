@@ -405,7 +405,7 @@ class _DashboardState extends State<Dashboard> {
                           fontSize: 21,
                           letterSpacing: .5,
                           color: goldLight)),
-                  Text(tr('by'),
+                  const Text('By Ashish Meniya',
                       style: const TextStyle(
                           fontWeight: FontWeight.w800,
                           fontSize: 18,
