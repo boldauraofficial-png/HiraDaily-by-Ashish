@@ -19,7 +19,7 @@ class HiraDailyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'HiraDaily By Ashish',
+        title: 'HiraDaily By Ashish Meniya',
         theme: ThemeData(
           brightness: Brightness.dark,
           scaffoldBackgroundColor: bg,
@@ -526,7 +526,14 @@ class _DashboardState extends State<Dashboard> {
             border: Border.all(color: gold.withOpacity(.65)),
           ),
           child: Row(children: [
-            const Icon(Icons.diamond, color: goldLight, size: 34),
+            ClipOval(
+  child: Image.asset(
+    'diamond_logo.jpeg',
+    width: 38,
+    height: 38,
+    fit: BoxFit.cover,
+  ),
+),
             const SizedBox(width: 12),
             Expanded(
                 child: Column(
@@ -537,7 +544,7 @@ class _DashboardState extends State<Dashboard> {
                           fontSize: 22,
                           fontWeight: FontWeight.w900,
                           color: goldLight)),
-                  Text(tr('by'),
+                  const Text('By Ashish Meniya'),
                       style: const TextStyle(
                           color: gold, fontSize: 18, fontWeight: FontWeight.bold)),
                   const SizedBox(height: 3),
